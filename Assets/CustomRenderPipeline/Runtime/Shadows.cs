@@ -66,10 +66,10 @@ public class Shadows
             {
                 visibleLightIndex = visibleLightIndex
             };
-            return new Vector2(light.shadowStrength, ShadowedDirectionalLightCount++);
+            return new Vector2(light.shadowStrength, settings.directional.cascadeCount * ShadowedDirectionalLightCount++);
         }
 
-        return new Vector2(light.shadowStrength, settings.directional.cascadeCount * ShadowedDirectionalLightCount++);
+        return Vector2.zero;
     }
 
     //渲染阴影贴图

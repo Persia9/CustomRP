@@ -51,7 +51,7 @@ Varyings ShadowCasterPassVertex(Attributes input)
     return output;
 }
 
-float4 ShadowCasterPassFragment(Varyings input)
+void ShadowCasterPassFragment(Varyings input)
 {
     //从input中提取实例的ID并将其存储在其他实例化宏所依赖的全局静态变量中
     UNITY_SETUP_INSTANCE_ID(input);
